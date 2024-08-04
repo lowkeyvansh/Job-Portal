@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Job</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Add Job</h1>
+        <nav>
+            <a href="/">Home</a>
+        </nav>
+    </header>
+    <main>
+        <section id="add-job">
+            <h2>Add a New Job</h2>
+            <form action="{{ url_for('add') }}" method="POST">
+                <label for="title">Job Title:</label>
+                <input type="text" id="title" name="title" required>
+                <label for="company">Company:</label>
+                <input type="text" id="company" name="company" required>
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" rows="4" required></textarea>
+                <button type="submit">Add Job</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Job Portal</p>
+    </footer>
+</body>
+</html>
